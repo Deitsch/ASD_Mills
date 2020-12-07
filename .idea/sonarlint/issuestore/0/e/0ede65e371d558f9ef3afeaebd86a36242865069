@@ -1,0 +1,102 @@
+
+‰"squid:ClassVariableVisibilityCheck'"OMake f12 a static final constant or non-public and provide accessors if needed.(„›í’şÿÿÿÿ8ˆâ¥ ğ-
+‰"squid:ClassVariableVisibilityCheck)"TMake lbl_info a static final constant or non-public and provide accessors if needed.(ÔèÕä8 ßÔÄş-
+Msquid:S5411a"*Use the primitive boolean expression here.(‚Ê÷üÿÿÿÿ8 ßÔÄş-
+Š"squid:ClassVariableVisibilityCheck%"UMake lbl_black a static final constant or non-public and provide accessors if needed.(ï€åá8ˆâ¥ ğ-
+’"squid:ClassVariableVisibilityCheck"XMake player_white a static final constant or non-public and provide accessors if needed.(á“Èâüÿÿÿÿ8ˆâ¥ ğ-
+Dsquid:S1659'"!Declare "f11" on a separate line.(„›í’şÿÿÿÿ8ˆâ¥ ğ-
+’"squid:ClassVariableVisibilityCheck"XMake player_black a static final constant or non-public and provide accessors if needed.(ƒÖñ€ÿÿÿÿÿ8ˆâ¥ ğ-
+isquid:S1192"FDefine a constant instead of duplicating this literal "white" 4 times.(á“Èâüÿÿÿÿ8ˆâ¥ ğ-
+ssquid:S00116%"TRename this field "lbl_black" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ï€åá8ˆâ¥ ğ-
+"squid:ClassVariableVisibilityCheck$"UMake lbl_white a static final constant or non-public and provide accessors if needed.(¨êÕşÿÿÿÿ8ˆâ¥ ğ-
+Isquid:S5411¢"*Use the primitive boolean expression here.(‚¹ÙÇ8ˆâ¥ ğ-
+Usquid:S1444"2Make this "public static player_black" field final(ƒÖñ€ÿÿÿÿÿ8ˆâ¥ ğ-
+Dsquid:S1659'"!Declare "f14" on a separate line.(„›í’şÿÿÿÿ8ˆâ¥ ğ-
+Dsquid:S1659'"!Declare "f18" on a separate line.(„›í’şÿÿÿÿ8ˆâ¥ ğ-
+Usquid:S1444"2Make this "public static player_white" field final(á“Èâüÿÿÿÿ8ˆâ¥ ğ-
+Csquid:S1659'" Declare "f8" on a separate line.(„›í’şÿÿÿÿ8ˆâ¥ ğ-
+‰"squid:ClassVariableVisibilityCheck'"OMake f17 a static final constant or non-public and provide accessors if needed.(„›í’şÿÿÿÿ8ˆâ¥ ğ-
+‰"squid:ClassVariableVisibilityCheck'"OMake f18 a static final constant or non-public and provide accessors if needed.(„›í’şÿÿÿÿ8ˆâ¥ ğ-
+nsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ÔÎáıÿÿÿÿ8 ßÔÄş-
+ˆ"squid:ClassVariableVisibilityCheck'"NMake f2 a static final constant or non-public and provide accessors if needed.(„›í’şÿÿÿÿ8ˆâ¥ ğ-
+‰"squid:ClassVariableVisibilityCheck'"OMake f10 a static final constant or non-public and provide accessors if needed.(„›í’şÿÿÿÿ8ˆâ¥ ğ-
+ˆ"squid:ClassVariableVisibilityCheck'"NMake f9 a static final constant or non-public and provide accessors if needed.(„›í’şÿÿÿÿ8ˆâ¥ ğ-
+asquid:HiddenFieldCheckP"8Rename "node" which hides the field declared at line 38.(¦‰ã¾8 ßÔÄş-
+Csquid:S1659'" Declare "f9" on a separate line.(„›í’şÿÿÿÿ8ˆâ¥ ğ-
+Tsquid:S2209Â"5Change this instance-reference to a static reference.(Àèõ8 ßÔÄş-
+Tsquid:S2209¾"5Change this instance-reference to a static reference.(Àèõ8 ßÔÄş-
+xsquid:S00116$"TRename this field "lbl_white" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¨êÕşÿÿÿÿ8ˆâ¥ ğ-
+ˆ"squid:ClassVariableVisibilityCheck'"NMake f8 a static final constant or non-public and provide accessors if needed.(„›í’şÿÿÿÿ8ˆâ¥ ğ-
+‰"squid:ClassVariableVisibilityCheck("OMake f22 a static final constant or non-public and provide accessors if needed.(±‘«ôüÿÿÿÿ8ˆâ¥ ğ-
+Msquid:S5411}"*Use the primitive boolean expression here.(³È±šüÿÿÿÿ8 ßÔÄş-
+Dsquid:S1659'"!Declare "f21" on a separate line.(„›í’şÿÿÿÿ8ˆâ¥ ğ-
+Dsquid:S1659("!Declare "f24" on a separate line.(±‘«ôüÿÿÿÿ8ˆâ¥ ğ-
+Csquid:S1659'" Declare "f7" on a separate line.(„›í’şÿÿÿÿ8ˆâ¥ ğ-
+Dsquid:S1659'"!Declare "f12" on a separate line.(„›í’şÿÿÿÿ8ˆâ¥ ğ-
+Dsquid:S1659'"!Declare "f15" on a separate line.(„›í’şÿÿÿÿ8ˆâ¥ ğ-
+Dsquid:S1659("!Declare "f22" on a separate line.(±‘«ôüÿÿÿÿ8ˆâ¥ ğ-
+msquid:S00100r"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(øÖ“8ˆâ¥ ğ-
+"squid:ClassVariableVisibilityCheck#"UMake lbl_title a static final constant or non-public and provide accessors if needed.(ØôŸüÿÿÿÿÿ8ˆâ¥ ğ-
+ˆ"squid:ClassVariableVisibilityCheck'"NMake f7 a static final constant or non-public and provide accessors if needed.(„›í’şÿÿÿÿ8ˆâ¥ ğ-
+Nsquid:S5411"*Use the primitive boolean expression here.(³È±šüÿÿÿÿ8 ßÔÄş-
+Š"squid:ClassVariableVisibilityCheck"UMake gamefield a static final constant or non-public and provide accessors if needed.(ùşó8ˆâ¥ ğ-
+]squid:S1854e":Remove this useless assignment to local variable "nodeId".(™ÿ‡üÿÿÿÿ8 ßÔÄş-
+ˆ"squid:ClassVariableVisibilityCheck!"NMake v1 a static final constant or non-public and provide accessors if needed.(È—ãĞşÿÿÿÿ8ˆâ¥ ğ-
+Msquid:S1444"/Make this "public static gamefield" field final(ùşó8ˆâ¥ ğ-
+‰"squid:ClassVariableVisibilityCheck'"OMake f20 a static final constant or non-public and provide accessors if needed.(„›í’şÿÿÿÿ8ˆâ¥ ğ-
+Dsquid:S1659("!Declare "f23" on a separate line.(±‘«ôüÿÿÿÿ8ˆâ¥ ğ-
+‰"squid:ClassVariableVisibilityCheck'"OMake f16 a static final constant or non-public and provide accessors if needed.(„›í’şÿÿÿÿ8ˆâ¥ ğ-
+‰"squid:ClassVariableVisibilityCheck'"OMake f11 a static final constant or non-public and provide accessors if needed.(„›í’şÿÿÿÿ8ˆâ¥ ğ-
+ssquid:S00100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(áú­Êüÿÿÿÿ8ˆâ¥ ğ-
+W"squid:SwitchLastCaseIsDefaultCheckw""Add a default case to this switch.(ÛñÛ8ˆâ¥ ğ-
+‰"squid:ClassVariableVisibilityCheck'"OMake f15 a static final constant or non-public and provide accessors if needed.(„›í’şÿÿÿÿ8ˆâ¥ ğ-
+wsquid:S00116+"SRename this field "bar_menu" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÚñõÄøÿÿÿÿ8ˆâ¥ ğ-
+jsquid:S1301ª"KReplace this "switch" statement by "if" statements to increase readability.(ÛñÛ8ˆâ¥ ğ-
+Ssquid:EmptyStatementUsageCheckŠ"Remove this empty statement.(Åñ­õşÿÿÿÿ8ˆâ¥ ğ-
+ˆ"squid:ClassVariableVisibilityCheck'"NMake f3 a static final constant or non-public and provide accessors if needed.(„›í’şÿÿÿÿ8ˆâ¥ ğ-
+isquid:S1192"FDefine a constant instead of duplicating this literal "black" 3 times.(ƒÖñ€ÿÿÿÿÿ8ˆâ¥ ğ-
+‰"squid:ClassVariableVisibilityCheck("OMake f23 a static final constant or non-public and provide accessors if needed.(±‘«ôüÿÿÿÿ8ˆâ¥ ğ-
+xsquid:S00116#"TRename this field "lbl_title" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ØôŸüÿÿÿÿÿ8ˆâ¥ ğ-
+Nsquid:S1481e"+Remove this unused "nodeId" local variable.(™ÿ‡üÿÿÿÿ8 ßÔÄş-
+Csquid:S1659'" Declare "f2" on a separate line.(„›í’şÿÿÿÿ8ˆâ¥ ğ-
+\
+squid:S106š"9Replace this use of System.out or System.err by a logger.(ƒÅş’ùÿÿÿÿ8 ßÔÄş-
+Jsquid:S1172-",Remove this unused method parameter "event".(—ò»8ˆâ¥ ğ-
+ˆ"squid:ClassVariableVisibilityCheck'"NMake f1 a static final constant or non-public and provide accessors if needed.(„›í’şÿÿÿÿ8ˆâ¥ ğ-
+Vsquid:S1135Ç"2Complete the task associated to this TODO comment.(» æÿÿÿÿÿ8ˆâ¥ ğ-
+Dsquid:S1659'"!Declare "f10" on a separate line.(„›í’şÿÿÿÿ8ˆâ¥ ğ-
+Dsquid:S1659'"!Declare "f19" on a separate line.(„›í’şÿÿÿÿ8ˆâ¥ ğ-
+Œ"squid:ClassVariableVisibilityCheck"RMake player a static final constant or non-public and provide accessors if needed.(Õï¾†ÿÿÿÿÿ8ˆâ¥ ğ-
+‰"squid:ClassVariableVisibilityCheck'"OMake f19 a static final constant or non-public and provide accessors if needed.(„›í’şÿÿÿÿ8ˆâ¥ ğ-
+squid:UselessImportCheck"TRemove this unnecessary import: same package classes are always implicitly imported.(¸›Ğ8 ßÔÄş-
+X"squid:SwitchLastCaseIsDefaultCheckª""Add a default case to this switch.(ÛñÛ8ˆâ¥ ğ-
+"squid:ClassVariableVisibilityCheck+"TMake bar_menu a static final constant or non-public and provide accessors if needed.(ÚñõÄøÿÿÿÿ8ˆâ¥ ğ-
+Š"squid:ClassVariableVisibilityCheck*"UMake outerPane a static final constant or non-public and provide accessors if needed.(¥ä×8ˆâ¥ ğ-
+‰"squid:ClassVariableVisibilityCheck("OMake f24 a static final constant or non-public and provide accessors if needed.(±‘«ôüÿÿÿÿ8ˆâ¥ ğ-
+Dsquid:S1659'"!Declare "f13" on a separate line.(„›í’şÿÿÿÿ8ˆâ¥ ğ-
+Nsquid:S2440 "+Remove this instantiation of "GameHandler".(ß¯€¥ÿÿÿÿÿ8 ßÔÄş-
+Csquid:S1659'" Declare "f5" on a separate line.(„›í’şÿÿÿÿ8ˆâ¥ ğ-
+Psquid:S1172½",Remove this unused method parameter "event".(İÄÑõıÿÿÿÿ8ˆâ¥ ğ-
+nsquid:CommentedOutCodeLineR"<This block of commented-out lines of code should be removed.(÷øøÇıÿÿÿÿ8 ßÔÄş-
+Csquid:S1659'" Declare "f4" on a separate line.(„›í’şÿÿÿÿ8ˆâ¥ ğ-
+Csquid:S1659'" Declare "f3" on a separate line.(„›í’şÿÿÿÿ8ˆâ¥ ğ-
+Psquid:S1172Á",Remove this unused method parameter "event".(ß±ïİûÿÿÿÿ8 ßÔÄş-
+‘"squid:ClassVariableVisibilityCheck "WMake gameHandler a static final constant or non-public and provide accessors if needed.(ß¯€¥ÿÿÿÿÿ8 ßÔÄş-
+…"squid:ClassVariableVisibilityCheck&"PMake node a static final constant or non-public and provide accessors if needed.(Ù‚é÷8ˆâ¥ ğ-
+‰"squid:ClassVariableVisibilityCheck'"OMake f14 a static final constant or non-public and provide accessors if needed.(„›í’şÿÿÿÿ8ˆâ¥ ğ-
+Osquid:S1444",Make this "public static player" field final(Õï¾†ÿÿÿÿÿ8ˆâ¥ ğ-
+‰"squid:ClassVariableVisibilityCheck'"OMake f21 a static final constant or non-public and provide accessors if needed.(„›í’şÿÿÿÿ8ˆâ¥ ğ-
+zsquid:S3008"WRename this field "player_black" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ƒÖñ€ÿÿÿÿÿ8ˆâ¥ ğ-
+rsquid:S00116)"SRename this field "lbl_info" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÔèÕä8 ßÔÄş-
+zsquid:S3008"WRename this field "player_white" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(á“Èâüÿÿÿÿ8ˆâ¥ ğ-
+ˆ"squid:ClassVariableVisibilityCheck'"NMake f6 a static final constant or non-public and provide accessors if needed.(„›í’şÿÿÿÿ8ˆâ¥ ğ-
+Dsquid:S1659'"!Declare "f17" on a separate line.(„›í’şÿÿÿÿ8ˆâ¥ ğ-
+Dsquid:S1659'"!Declare "f20" on a separate line.(„›í’şÿÿÿÿ8ˆâ¥ ğ-
+isquid:S1301w"KReplace this "switch" statement by "if" statements to increase readability.(ÛñÛ8ˆâ¥ ğ-
+ƒ"squid:ClassVariableVisibilityCheck""NMake v2 a static final constant or non-public and provide accessors if needed.(§üÚ·8ˆâ¥ ğ-
+ˆ"squid:ClassVariableVisibilityCheck'"NMake f4 a static final constant or non-public and provide accessors if needed.(„›í’şÿÿÿÿ8ˆâ¥ ğ-
+‰"squid:ClassVariableVisibilityCheck'"OMake f13 a static final constant or non-public and provide accessors if needed.(„›í’şÿÿÿÿ8ˆâ¥ ğ-
+Csquid:S1659'" Declare "f6" on a separate line.(„›í’şÿÿÿÿ8ˆâ¥ ğ-
+qsquid:S1192·"RDefine a constant instead of duplicating this literal "Nine Men's Morris" 3 times.(âûûö8 ßÔÄş-
+ˆ"squid:ClassVariableVisibilityCheck'"NMake f5 a static final constant or non-public and provide accessors if needed.(„›í’şÿÿÿÿ8ˆâ¥ ğ-
+Dsquid:S1659'"!Declare "f16" on a separate line.(„›í’şÿÿÿÿ8ˆâ¥ ğ-

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<Pane fx:id="outerPane" prefHeight="650.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mill.controllers.Controller">
+   <children>
+      <MenuBar fx:id="bar_menu" prefHeight="25.0" prefWidth="800.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#startGame" text="New Game" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#showRules" text="Rules" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <Pane layoutX="325.0" layoutY="325.0" prefHeight="150.0" prefWidth="150.0" style="-fx-border-color: black; -fx-border-image-insets: 5; -fx-border-width: 3;" />
+      <Pane layoutX="250.0" layoutY="250.0" prefHeight="300.0" prefWidth="300.0" style="-fx-border-color: black; -fx-border-image-insets: 5; -fx-border-width: 3;" />
+      <Pane fx:id="innerPane" layoutX="175.0" layoutY="175.0" prefHeight="450.0" prefWidth="450.0" style="-fx-border-color: black; -fx-border-image-insets: 5; -fx-border-width: 3;">
+         <children>
+            <Line endX="54.0" layoutX="396.0" layoutY="225.0" startX="-98.0" strokeWidth="2.0" />
+            <Line endX="54.0" layoutX="99.0" layoutY="225.0" startX="-98.0" strokeWidth="2.0" />
+            <Line endX="54.0" layoutX="248.0" layoutY="77.0" rotate="90.0" startX="-98.0" strokeWidth="2.0" />
+            <Line endX="54.0" layoutX="249.0" layoutY="373.0" rotate="90.0" startX="-98.0" strokeWidth="2.0" />
+            <ImageView fx:id="f10" fitHeight="65.0" fitWidth="73.0" layoutX="189.0" layoutY="44.0" onMouseClicked="#setToken" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="f9" fitHeight="65.0" fitWidth="73.0" layoutX="41.0" layoutY="45.0" onMouseClicked="#setToken" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="f11" fitHeight="65.0" fitWidth="73.0" layoutX="338.0" layoutY="44.0" onMouseClicked="#setToken" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="f15" fitHeight="65.0" fitWidth="73.0" layoutX="41.0" layoutY="341.0" onMouseClicked="#setToken" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="f14" fitHeight="65.0" fitWidth="73.0" layoutX="192.0" layoutY="341.0" onMouseClicked="#setToken" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="f13" fitHeight="65.0" fitWidth="73.0" layoutX="338.0" layoutY="341.0" onMouseClicked="#setToken" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="f23" fitHeight="65.0" fitWidth="73.0" layoutX="118.0" layoutY="264.0" onMouseClicked="#setToken" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="f16" fitHeight="65.0" fitWidth="73.0" layoutX="41.0" layoutY="192.0" onMouseClicked="#setToken" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="f12" fitHeight="65.0" fitWidth="73.0" layoutX="338.0" layoutY="192.0" onMouseClicked="#setToken" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="f20" fitHeight="65.0" fitWidth="73.0" layoutX="261.0" layoutY="193.0" onMouseClicked="#setToken" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="f17" fitHeight="65.0" fitWidth="73.0" layoutX="115.0" layoutY="122.0" onMouseClicked="#setToken" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="f21" fitHeight="65.0" fitWidth="73.0" layoutX="261.0" layoutY="265.0" onMouseClicked="#setToken" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="f19" fitHeight="65.0" fitWidth="73.0" layoutX="261.0" layoutY="120.0" onMouseClicked="#setToken" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="f24" fitHeight="65.0" fitWidth="73.0" layoutX="118.0" layoutY="192.0" onMouseClicked="#setToken" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="f18" fitHeight="65.0" fitWidth="73.0" layoutX="189.0" layoutY="120.0" onMouseClicked="#setToken" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="f22" fitHeight="65.0" fitWidth="73.0" layoutX="189.0" layoutY="264.0" onMouseClicked="#setToken" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </Pane>
+      <ImageView fx:id="f1" fitHeight="65.0" fitWidth="73.0" layoutX="140.0" layoutY="145.0" onMouseClicked="#setToken" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="f2" fitHeight="65.0" fitWidth="73.0" layoutX="364.0" layoutY="143.0" onMouseClicked="#setToken" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="f3" fitHeight="65.0" fitWidth="73.0" layoutX="587.0" layoutY="143.0" onMouseClicked="#setToken" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="f4" fitHeight="65.0" fitWidth="73.0" layoutX="587.0" layoutY="368.0" onMouseClicked="#setToken" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="f5" fitHeight="65.0" fitWidth="73.0" layoutX="585.0" layoutY="593.0" onMouseClicked="#setToken" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="f6" fitHeight="65.0" fitWidth="73.0" layoutX="365.0" layoutY="593.0" onMouseClicked="#setToken" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="f7" fitHeight="65.0" fitWidth="73.0" layoutX="140.0" layoutY="585.0" onMouseClicked="#setToken" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="f8" fitHeight="65.0" fitWidth="73.0" layoutX="136.0" layoutY="368.0" onMouseClicked="#setToken" pickOnBounds="true" preserveRatio="true" />
+      <VBox fx:id="v1" layoutX="60.0" layoutY="120.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="470.0" prefWidth="108.0" />
+      <Label id="lbl_title" fx:id="lbl_title" layoutX="275.0" layoutY="80.0" text="Nine Men's Morris" underline="true">
+         <font>
+            <Font name="System Bold Italic" size="29.0" />
+         </font>
+      </Label>
+      <VBox fx:id="v2" layoutX="685.0" layoutY="120.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="470.0" prefWidth="108.0" />
+      <Label fx:id="lbl_white" layoutX="60.0" layoutY="72.0" prefHeight="17.0" prefWidth="108.0" text="white" visible="false">
+         <font>
+            <Font name="Times New Roman Bold" size="21.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbl_black" layoutX="685.0" layoutY="72.0" prefHeight="17.0" prefWidth="108.0" text="black" textAlignment="RIGHT" visible="false">
+         <font>
+            <Font name="Times New Roman" size="21.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="lbl_info" fitHeight="20.0" fitWidth="20.0" layoutX="761.0" layoutY="36.0" onMouseClicked="#showRulesFromInfo" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../ressource/info.png" />
+         </image>
+      </ImageView>
+   </children>
+</Pane>
