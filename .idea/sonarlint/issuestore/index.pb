@@ -1,8 +1,6 @@
 
 T
 $src/main/java/mill/model/Player.java,7/d/7d73588ae1b9baac389e820044c89be0d65c7b69
-Q
-!src/main/java/resource/Board.fxml,6/2/62f9668136392c71e17c43c4c8c077139c535c9a
 G
 src/main/java/Main.java,e/4/e44a8606ce010ad9b89aafdfcee2ab49afbf6d10
 Q
