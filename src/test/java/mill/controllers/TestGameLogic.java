@@ -10,7 +10,7 @@ import mill.model.Gamefield;
 import mill.model.Node;
 import mill.model.Token;
 
-class TestGameHandler {
+class TestGameLogic {
 	public static Gamefield gamefield = new Gamefield(false, 1);
 
 	@BeforeEach

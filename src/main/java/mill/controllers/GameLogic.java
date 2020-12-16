@@ -8,40 +8,7 @@ import javafx.scene.layout.VBox;
 import mill.controllers.*;
 import mill.model.*;
 
-public class GameHandler {
-
-	public static void changePlayer() {
-
-		if (Controller.player_white.isTurn) {
-			Controller.player_white.setIsTurn(false);
-			Controller.player = Controller.player_black.color;
-			Controller.player_black.setIsTurn(true);
-		} else {
-			Controller.player_white.setIsTurn(true);
-			Controller.player = Controller.player_white.color;
-			Controller.player_black.setIsTurn(false);
-		}
-	}
-
-	public static void checkAndChangeGamePhase(VBox v1, VBox v2) {
-
-		if ((v1.getChildren().size() <= 0) && (v2.getChildren().size() <= 0)
-				&& (Controller.gamefield.getGamePhase() == 1)) {
-			Controller.gamefield.setGamePhase(2);
-
-		}
-	}
-
-	public static void messageBox(String title, String header, String text) {
-		Alert alert = new Alert(AlertType.INFORMATION);
-
-		alert.setTitle(title);
-		alert.setHeaderText(header);
-		alert.setContentText(text);
-		alert.showAndWait();
-
-	}
-
+public class GameLogic {
 
 	public static Boolean checkMill(Node token, Gamefield gamefield) {
 		Node token_1 = null;
@@ -143,7 +110,7 @@ public class GameHandler {
 		return true;
 	}
 
-	public static boolean isMill(Node token, Node token_2, Node token_3) {
+	private static boolean isMill(Node token, Node token_2, Node token_3) {
 		return token.getToken().equals(token_2.getToken()) && token.getToken().equals(token_3.getToken());
 	}
 

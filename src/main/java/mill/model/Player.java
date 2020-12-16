@@ -1,61 +1,38 @@
 package mill.model;
 
+import javafx.scene.image.Image;
+
 public class Player {
 	
 	public String name; 
-	public String color;
-	public Boolean isTurn;
+	public MillsColors color;
+	private Figure figure;
 
-	
-	public Player(String name, String color, Boolean isTurn) {
-		this.setName(name);
-		this.setColor(color);
-		this.setIsTurn(isTurn);
-		
-	}
-	
-	public Player (String name) {
-		this.setName(name);
+	public Player(String name, MillsColors color) {
+		this.name = name;
+		this.color = color;
+		setupFigure(color);
 	}
 
-	private void setColor(String color) {
-		this.color=color;
+	public Figure getFigure() {
+		return figure;
 	}
 
-	private void setName(String name) {
-		this.name=name;
+	private void setupFigure(MillsColors color) {
+		Image image;
+		Image imageSelected;
+		switch(color) {
+			case black:
+				image = new Image("black.png", 50, 50, true, true);
+				imageSelected = new Image("black_green.png", 50, 50, true, true);
+				break;
+			case white:
+				image = new Image("white.png", 50, 50, true, true);
+				imageSelected = new Image("white_green.png", 50, 50, true, true);
+				break;
+			default:
+				throw new IllegalStateException("All enum cases have to be handled here");
+		}
+		this.figure = new Figure(image, imageSelected);
 	}
-
-	
-	//Gettermethoden
-		public String getName(){
-			return this.name;
-		}
-		public String getColor(){
-			return this.color;
-		}
-
-		
-		public Boolean getIsTurn() {
-			return isTurn;
-		}
-
-		public void setIsTurn(Boolean isTurn) {
-			this.isTurn = isTurn;
-		}
-
-		@Override
-		public String toString(){
-			
-			return  "Der Spieler heißt: " +this.name				
-					//+"\nBeginnt das Spiel: "+this.beginner
-					//+"\nist am Zug: "+this.spielen
-					+"\nund hat die Farbe: "+this.color
-					+"\nENDE\n\n";
-		}
-	
-	
-	
-	
-
 }
