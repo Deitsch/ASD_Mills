@@ -5,6 +5,7 @@ import javafx.event.EventHandler;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.scene.control.MenuBar;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
@@ -30,8 +31,8 @@ public class Controller implements Initializable, EventHandler<MouseEvent> {
 	private Game game;
 
 	Controller() {
-		Player player_white = new Player("Bobo", MillsColors.white);
-		Player player_black = new Player("Maddin", MillsColors.black);
+		Player player_white = new Player("Bobo", MillsColors.white, Token.WHITE);
+		Player player_black = new Player("Maddin", MillsColors.black, Token.BLACK);
 
 		this.game = new Game(player_white, player_black);
 	}
@@ -73,10 +74,10 @@ public class Controller implements Initializable, EventHandler<MouseEvent> {
 				Util.showAlert(Constants.ALERT_TITLE, "Start a new Game!", "");
 				break;
 			case setting:
-				setToken_phase1(event);
+				setTokenSettingPhase(event);
 				break;
 			case moving:
-				setToken_phase2(event);
+				setTokenMovingPhase(event);
 				break;
 			default:
 				throw new IllegalArgumentException("Unknown Game State");
@@ -84,13 +85,12 @@ public class Controller implements Initializable, EventHandler<MouseEvent> {
 	}
 
 
-	private void setToken_phase1(MouseEvent event) {
+	private void setTokenSettingPhase(MouseEvent event) {
 		ImageView field = (ImageView) event.getSource();
 		String nodeId = field.getId();
 
 		if (field.getImage() != null) {
 			Util.showAlert(Constants.ALERT_TITLE, "An dieser Stelle ist bereits ein Spielstein vorhanden", "");
-			// System.out.println("Log: Hier ist bereits ein Spielstein vorhanden");
 			return;
 		}
 
@@ -110,16 +110,16 @@ public class Controller implements Initializable, EventHandler<MouseEvent> {
 		bench.getChildren().remove(bench.getChildren().size() - 1);
 	}
 
-	private void setToken_phase2(MouseEvent event) {
+	private void setTokenMovingPhase(MouseEvent event) {
 		ImageView field = (ImageView) event.getSource();
 		String nodeId = field.getId();
 
-		Node node = game.gamefield.getNodeByID(nodeId);
+		// check if field myToken -> select & deselect others
 
-		if (node.getToken() != Token.EMPTY) {
-			game.selectNode(nodeId);
-			field.setImage(game.activePlayer.getFigure().selectedImage);
-		}
+		// check if field is Empty -> move my token to empty field
+
+		Image image = game.moveToken(nodeId);
+		field.setImage(image);
 	}
 
 	// TODO: Fix if these are in fact the same -> remove one!

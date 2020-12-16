@@ -30,15 +30,15 @@ public class Node {
 	}
 
 
-	public void setColumn(int spalte) {
+	public void setColumn(int column) {
 		// TODO Auto-generated method stub
-		this.column=spalte;
+		this.column=column;
 	}
 
 
-	public void setRow(int zeile) {
+	public void setRow(int row) {
 		// TODO Auto-generated method stub
-		this.row=zeile;
+		this.row=row;
 	}
 
 

@@ -1,8 +1,8 @@
 package mill.controllers;
 
+import javafx.scene.image.Image;
 import javafx.scene.layout.VBox;
 import mill.Constants;
-import mill.Util;
 import mill.model.Gamefield;
 import mill.model.Node;
 import mill.model.Player;
@@ -16,14 +16,12 @@ enum GamePhase {
 
 public class Game {
 
-    Player player_white;
-    Player player_black;
-
+    public Player player_white;
+    public Player player_black;
     public Player activePlayer;
 
-    Gamefield gamefield;
-
-    GamePhase gamePhase;
+    private Gamefield gamefield;
+    public GamePhase gamePhase;
 
     Game(Player white, Player black) {
         this.player_white = white;
@@ -47,16 +45,7 @@ public class Game {
     }
 
     public void setTokenForCurrentPlayer(String nodeId) {
-        Token token;
-        switch (activePlayer.color) {
-            case white:
-                token = Token.WHITE;
-            case black:
-                token = Token.BLACK;
-            default:
-                token = Token.EMPTY;
-        }
-        gamefield.getNodeByID(nodeId).setToken(token);
+        gamefield.getNodeByID(nodeId).setToken(activePlayer.token);
     }
 
     public void selectNode(String nodeId) {
@@ -66,20 +55,28 @@ public class Game {
 
     private void deselectAllNodes() {
         for (int i = 1; i < Constants.MAX_FIELDS; i++) {
-            gamefield.getNodeByID("f" + Integer.toString(i)).setSelected(false);
+            gamefield.getNodeByID("f" + i).setSelected(false);
         }
+    }
+
+    public Image moveToken(String nodeId) {
+        Node node = gamefield.getNodeByID(nodeId);
+
+        if (node.getToken() != Token.EMPTY) {
+            selectNode(nodeId);
+            return activePlayer.getFigure().selectedImage;
+        }
+        throw new IllegalStateException("Moving token illegally is not handled yet");
     }
 
     public void resetGameField() {
         int i = 0;
-        for (int spielfeldZeile = 0; spielfeldZeile < Constants.boardRows; spielfeldZeile++) {
-            for (int spielfeldSpalte = 0; spielfeldSpalte < Constants.boardColumns; spielfeldSpalte++) {
+        for (int row = 0; row < Constants.boardRows; row++) {
+            for (int column = 0; column < Constants.boardColumns; column++) {
                 i++;
                 boolean inCorner = (i % 2 != 0);
-                String id = "f" + i;
-                Node node = new Node(Token.EMPTY, spielfeldZeile, spielfeldSpalte, id, false, inCorner);
-                gamefield.setGameField(node, spielfeldZeile, spielfeldSpalte);
-                // System.out.println(node.getID());
+                Node node = new Node(Token.EMPTY, row, column, "f" + i, false, inCorner);
+                gamefield.setNode(node, row, column);
             }
         }
     }

@@ -2,7 +2,7 @@ package mill.model;
 
 public class Gamefield {
 
-	public Node[][] gamefield = new Node [3][8];
+	private Node[][] gamefield = new Node [3][8];
 
 	public Gamefield () { }
 
@@ -11,42 +11,37 @@ public class Gamefield {
 	}
 
 	public Node getNodeByID(String id){
-		Node field = null;
+		Integer gameFieldRows = getGamefieldRows();
+		Integer gameFieldColumns = getGamefieldColumns();
+		Node field;
 
-		for (int zeile = 0; zeile < gamefield.length; zeile++ ){
-			for (int spalte=0; spalte < gamefield[zeile].length; spalte++){
-
-				field=gamefield[zeile][spalte];
-				//System.out.println(field.getID());
-				//System.out.println(field);
-				//System.out.println("Vergleich ID: " + id + " mit Feld ID " + field.getID());
-
+		for (int row = 0; row < gameFieldRows; row++ ){
+			for (int column=0; column < gameFieldColumns; column++){
+				field=gamefield[row][column];
 				if(id.equalsIgnoreCase(field.getID())) {
 					return field;
-				}
-				else {
-					//System.out.println("Log: Feld wurde nicht gefunden");
 				}
 			}
 		}
 		return null;
 	}
 
-	public Node[][] setGameField(Node field, int spielfeldZeile, int spielfeldSpalte) {
-		gamefield[spielfeldZeile][spielfeldSpalte]= field;
+	public Node[][] setNode(Node node, int row, int column) {
+		gamefield[row][column] = node;
 		return gamefield;
 	}
 
 	public void printGameField(){
-		for (int zeile = 0; zeile < gamefield.length; zeile++ )
+		Integer gameFieldRows = getGamefieldRows();
+		Integer gameFieldColumns = getGamefieldColumns();
+
+		for (int row = 0; row < gameFieldRows; row++)
 		{
-			System.out.print("Zeile " + zeile + ": ");
-			for ( int spalte=0; spalte < gamefield[zeile].length; spalte++ )
-				System.out.print( gamefield[zeile][spalte].getToken() + " ");
+			System.out.print("Zeile " + row + ": ");
+			for (int column = 0; column < gameFieldColumns; column++)
+				System.out.print(gamefield[row][column].getToken() + " ");
 			System.out.println();
 		}
-
-		//System.out.println(gamefield.length);
 	}
 
 	public int getGamefieldColumns() {

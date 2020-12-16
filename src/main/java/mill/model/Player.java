@@ -6,18 +6,22 @@ public class Player {
 	
 	public String name; 
 	public MillsColors color;
+	public Token token;
 	private Figure figure;
 
-	public Player(String name, MillsColors color) {
+	public Player(String name, MillsColors color, Token token) {
 		this.name = name;
 		this.color = color;
 		setupFigure(color);
+		this.token = token;
 	}
 
 	public Figure getFigure() {
 		return figure;
 	}
 
+
+	// TODO: as enum extension? Possible in Java?
 	private void setupFigure(MillsColors color) {
 		Image image;
 		Image imageSelected;
