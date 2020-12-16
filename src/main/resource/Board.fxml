@@ -61,7 +61,7 @@
       <ImageView fx:id="f6" fitHeight="65.0" fitWidth="73.0" layoutX="365.0" layoutY="593.0" onMouseClicked="#setToken" pickOnBounds="true" preserveRatio="true" />
       <ImageView fx:id="f7" fitHeight="65.0" fitWidth="73.0" layoutX="140.0" layoutY="585.0" onMouseClicked="#setToken" pickOnBounds="true" preserveRatio="true" />
       <ImageView fx:id="f8" fitHeight="65.0" fitWidth="73.0" layoutX="136.0" layoutY="368.0" onMouseClicked="#setToken" pickOnBounds="true" preserveRatio="true" />
-      <VBox fx:id="bench_white" layoutX="60.0" layoutY="120.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="470.0" prefWidth="108.0" />
+      <VBox fx:id="benchWhite" layoutX="60.0" layoutY="120.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="470.0" prefWidth="108.0" />
       <Label id="lbl_title" fx:id="lbl_title" layoutX="275.0" layoutY="80.0" text="Nine Men's Morris" underline="true">
          <font>
             <Font name="System Bold Italic" size="29.0" />

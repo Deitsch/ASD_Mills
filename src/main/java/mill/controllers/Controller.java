@@ -19,7 +19,7 @@ import mill.model.*;
 
 public class Controller implements Initializable, EventHandler<MouseEvent> {
 
-	public VBox benchVhite, benchBlack;
+	public VBox benchWhite, benchBlack;
 	public Label lbl_title, lbl_white, lbl_black;
 	public ImageView f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, f11, f12, f13, f14, f15, f16, f17, f18, f19, f20, f21,
 			f22, f23, f24;
@@ -47,7 +47,7 @@ public class Controller implements Initializable, EventHandler<MouseEvent> {
 	public void startGame(ActionEvent event) {
 		resetBoard();
 
-		resetBench(benchVhite, game.player_white);
+		resetBench(benchWhite, game.player_white);
 		resetBench(benchBlack, game.player_black);
 
 		game.gamePhase = GamePhase.setting;
@@ -97,12 +97,12 @@ public class Controller implements Initializable, EventHandler<MouseEvent> {
 		game.setTokenForCurrentPlayer(nodeId);
 
 		if (game.activePlayer.color == MillsColors.white) {
-			reduceBench(benchVhite);
+			reduceBench(benchWhite);
 		} else {
 			reduceBench(benchBlack);
 		}
 
-		game.checkAndChangeGamePhase(benchVhite, benchBlack);
+		game.checkAndChangeGamePhase(benchWhite, benchBlack);
 		game.changeActivePlayer();
 	}
 
