@@ -67,7 +67,7 @@
             <Font name="System Bold Italic" size="29.0" />
          </font>
       </Label>
-      <VBox fx:id="bench_black" layoutX="685.0" layoutY="120.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="470.0" prefWidth="108.0" />
+      <VBox fx:id="benchBlack" layoutX="685.0" layoutY="120.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="470.0" prefWidth="108.0" />
       <Label fx:id="lbl_white" layoutX="60.0" layoutY="72.0" prefHeight="17.0" prefWidth="108.0" text="white" visible="false">
          <font>
             <Font name="Times New Roman Bold" size="21.0" />

@@ -19,9 +19,8 @@ import mill.model.*;
 
 public class Controller implements Initializable, EventHandler<MouseEvent> {
 
-	public VBox bench_white, bench_black;
+	public VBox benchVhite, benchBlack;
 	public Label lbl_title, lbl_white, lbl_black;
-	public Node node;
 	public ImageView f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, f11, f12, f13, f14, f15, f16, f17, f18, f19, f20, f21,
 			f22, f23, f24;
 	public ImageView lbl_info;
@@ -37,7 +36,8 @@ public class Controller implements Initializable, EventHandler<MouseEvent> {
 		this.game = new Game(player_white, player_black);
 	}
 
-	private void resetGameUI() {
+	private void resetBoard() {
+		game.resetGameField();
 		for (int i = 1; i < Constants.MAX_FIELDS; i++) {
 			ImageView f = (ImageView) outerPane.lookup("#f" + i);
 			f.setImage(null);
@@ -45,17 +45,17 @@ public class Controller implements Initializable, EventHandler<MouseEvent> {
 	}
 
 	public void startGame(ActionEvent event) {
-		resetGameUI();
+		resetBoard();
 
-		resetBench(bench_white, game.player_white);
-		resetBench(bench_black, game.player_black);
+		resetBench(benchVhite, game.player_white);
+		resetBench(benchBlack, game.player_black);
 
 		game.gamePhase = GamePhase.setting;
 	}
 
 	private void resetBench(VBox bench, Player player) {
 		bench.getChildren().clear();
-		for (int i = 0; i < 9; i++) {
+		for (int i = 0; i < Constants.AMOUNT_TOKENS; i++) {
 			ImageView view = new ImageView(player.getFigure().image);
 			bench.getChildren().add(view);
 			lbl_black.setVisible(true);
@@ -70,7 +70,7 @@ public class Controller implements Initializable, EventHandler<MouseEvent> {
 	public void setToken(MouseEvent event) {
 		switch (game.gamePhase) {
 			case notStarted:
-				Util.showAlert("Nine Men's Morris", "Start a new Game!", "");
+				Util.showAlert(Constants.ALERT_TITLE, "Start a new Game!", "");
 				break;
 			case setting:
 				setToken_phase1(event);
@@ -78,6 +78,8 @@ public class Controller implements Initializable, EventHandler<MouseEvent> {
 			case moving:
 				setToken_phase2(event);
 				break;
+			default:
+				throw new IllegalArgumentException("Unknown Game State");
 		}
 	}
 
@@ -87,20 +89,20 @@ public class Controller implements Initializable, EventHandler<MouseEvent> {
 		String nodeId = field.getId();
 
 		if (field.getImage() != null) {
-			Util.showAlert("Error", "An dieser Stelle ist bereits ein Spielstein vorhanden", "");
-			System.out.println("Log: Hier ist bereits ein Spielstein vorhanden");
+			Util.showAlert(Constants.ALERT_TITLE, "An dieser Stelle ist bereits ein Spielstein vorhanden", "");
+			// System.out.println("Log: Hier ist bereits ein Spielstein vorhanden");
 			return;
 		}
 
 		game.setTokenForCurrentPlayer(nodeId);
 
 		if (game.activePlayer.color == MillsColors.white) {
-			reduceBench(bench_white);
+			reduceBench(benchVhite);
 		} else {
-			reduceBench(bench_black);
+			reduceBench(benchBlack);
 		}
 
-		game.checkAndChangeGamePhase(bench_white, bench_black);
+		game.checkAndChangeGamePhase(benchVhite, benchBlack);
 		game.changeActivePlayer();
 	}
 
@@ -112,32 +114,21 @@ public class Controller implements Initializable, EventHandler<MouseEvent> {
 		ImageView field = (ImageView) event.getSource();
 		String nodeId = field.getId();
 
-		if (!gamefield.getNode(nodeId).getSelected()) {
-			for (int i = 1; i <= 24; i++) {
+		Node node = game.gamefield.getNodeByID(nodeId);
 
-				gamefield.getNode("f" + Integer.toString(i)).setSelected(false);
-			}
-			gamefield.getNode(nodeId).setSelected(true);
-		}
-		if (gamefield.getNode(nodeId).getToken() != Token.EMPTY) {
-			switch (player) {
-			case "white":
-				field.setImage(SELECTED_WHITE);
-				break;
-			case "black":
-				field.setImage(SELECTED_BLACK);
-				break;
-			}
+		if (node.getToken() != Token.EMPTY) {
+			game.selectNode(nodeId);
+			field.setImage(game.activePlayer.getFigure().selectedImage);
 		}
 	}
 
 	// TODO: Fix if these are in fact the same -> remove one!
 	public void showRules(ActionEvent event) {
-		Util.showAlert("Nine Men's Morris", "Game Rules", "Define Rules here");
+		Util.showAlert(Constants.ALERT_TITLE, "Game Rules", "Define Rules here");
 	}
 
 	public void showRulesFromInfo(MouseEvent event) {
-		Util.showAlert("Nine Men's Morris", "Game Rules", "Define Rules here");
+		Util.showAlert(Constants.ALERT_TITLE, "Game Rules", "Define Rules here");
 	}
 
 	@Override

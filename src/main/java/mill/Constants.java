@@ -11,4 +11,6 @@ public class Constants {
 
     public static final int boardColumns = 8;
     public static final int boardRows = 3;
+
+    public static final String ALERT_TITLE = "Nine Men's Morris";
 }

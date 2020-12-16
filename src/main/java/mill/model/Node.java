@@ -59,7 +59,7 @@ public class Node {
 		}
 
 
-		public Boolean getSelected() {
+		public Boolean isSelected() {
 			return selected;
 		}
 		
